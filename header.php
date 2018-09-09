@@ -6,12 +6,12 @@
         <h2 class="h6 orangeText">Le spécialiste des sneakers pour tous</h2>
       </div>
       <div class="navbar col-3 col-lg-8 d-flex justify-content-end">
-        <nav class="d-none d-lg-block">
+        <nav class="d-none d-md-block">
           <ul class="list-unstyled">
             <li><a class="scroll blackText" href="index.php">Accueil</a></li>
           </ul>
         </nav>
-        <nav class="d-lg-none">
+        <nav class="d-md-none">
           <img class="menu text-right" src="img/menu.svg" alt="menu.svg">
         </nav>
       </div>
