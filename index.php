@@ -1,10 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
+  <title>Baskets For Street</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <meta name="description" content="">
@@ -25,10 +25,78 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <?php include("header.php"); ?>
+  <?php include("header.php");
 
-  <?php include("product_page.php"); ?>
+  $products = array(
+      array(
+          'productName' => 'Victoria Deportivo Pu Contraste',
+          'price' => 'A partir de 68 euros',
+          'image' => 'img/basket_homme.jpg',
+          'availability' => 'Oui',
+          'description' => 'Description 1'),
 
+      array(
+          'productName' => 'Vans Old Skool W',
+          'price' => 'A partir de 74,99 € euros',
+          'image' => 'img/basket_femme.jpg',
+          'availability' => 'Non',
+          'description' => 'Description 2'),
+
+      array(
+          'productName' => 'Veja Esplar Small Velcro',
+          'price' => 'A partir de 70 euros',
+          'image' => 'img/basket_fille.jpg',
+          'availability' => 'Oui',
+          'description' => 'Description 3'),
+
+      array(
+          'productName' => 'Geox J Kommodor B.C J825Pc',
+          'price' => 'A partir de 75 euros',
+          'image' => 'img/basket_garcon.jpg',
+          'availability' => 'Non',
+          'description' => 'Description 4')
+
+  );
+
+
+
+  foreach ($products as $key => $value) {
+
+  ?>
+
+    <a href="product_page.php?index=<?php echo $key; ?>">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><?php echo $value['productName']; ?></h5>
+        </div>
+        <img class="card-img-top basket" src=<?php echo $value['image'];?> alt="Card image cap">
+        <p class="d-none"><?php echo $value['description'];?></p>
+        <div class="card-footer">
+          <strong class="text-muted"><?php echo $value['price'];?></strong>
+          <p class="d-none"><?php echo $value['availability'];?></p>
+        </div>
+      </div>
+    </a>
+
+  <?php
+
+  }
+  ?>
+
+
+  <!-- <a href="product_page.php?">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Victoria Deportivo Pu Contraste</h5>
+      </div>
+      <img class="card-img-top basket" src="img/basket_homme.jpg" alt="Card image cap">
+      <p class="d-none">Description</p>
+      <div class="card-footer">
+        <strong class="text-muted">À partir de 68,00€</strong>
+        <p class="d-none">Disponibilité</p>
+      </div>
+    </div>
+  </a> -->
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
