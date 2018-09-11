@@ -1,4 +1,4 @@
-<footer class="footer container-fluid mt-5" style="background: #308889;">
+<footer class="footer container-fluid" style="background: #308889;">
     <div class="row">
       <div class="col">
         ©Copyright 2018: Kadidiatou-Jean-Charles
