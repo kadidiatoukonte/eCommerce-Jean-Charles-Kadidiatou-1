@@ -342,3 +342,27 @@ header{
 main .description{
   overflow-y: auto;
 }
+
+@media (min-width: 768px) {
+  .basketCard{
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  .basketCard{
+    max-width: 235px;
+  }
+  .cardTitle{
+    min-height: 56px;
+  }
+}
+
+/*******************************Footer*****************************************/
+
+.footer{
+  color: white;
+  bottom: 0;
+  /* position: absolute; */
+  padding: 1em;
+}
