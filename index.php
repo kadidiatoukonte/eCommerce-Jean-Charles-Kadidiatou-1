@@ -23,10 +23,9 @@
 
 <main>
 
-
   <h2 class="text-center h4 mt-4">Sélection de la semaine</h2>
 
-  <div class="row mw1200 col-12 mx-auto d-flex justify-content-around">
+  <div class="row col-12 mx-auto d-flex justify-content-around">
 
       <?php
       foreach ($products as $key => $value) {
@@ -34,9 +33,9 @@
 
       <div class="basketCard mt-3 border border-dark col-12 col-md-6 col-lg-3">
         <a href="product_page.php?index=<?php echo $key; ?>">
-          <p class="cardTitle text-center pt-2"><?php echo $value['productName']; ?></p>
+          <p class="cardTitle text-center pt-2 blackText"><?php echo $value['productName']; ?></p>
           <img class="cardImg w-100" src=<?php echo $value['image'];?> alt="basket_homme.jpg">
-          <p class="cardPrice text-center pb-2 mb-0 mt-2"><?php echo $value['price'];?></p>
+          <p class="cardPrice text-center pb-2 mb-0 mt-2 blackText"><?php echo $value['price'];?></p>
         </a>
       </div>
 

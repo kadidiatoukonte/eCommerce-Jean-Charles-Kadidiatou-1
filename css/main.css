@@ -288,6 +288,10 @@ textarea {
 
 /******************Start*******************************************************/
 
+a:link{
+  text-decoration: none;
+}
+
 /******************Colors******************************************************/
 
 .blueGreyText{
@@ -310,13 +314,17 @@ textarea {
   color: #000!important;
 }
 
+.whiteText{
+  color: #fff!important;
+}
+
 
 /**************************Header**********************************************/
 
 header{
   width: 100%;
-  height: 15vh;
-  border-bottom: 1px solid black;
+  height: 20vh;
+  border-bottom: 3px solid #ec6609;
 }
 
 .menu{
@@ -343,6 +351,19 @@ main .description{
   overflow-y: auto;
 }
 
+/*******************************Footer*****************************************/
+
+.footer{
+  color: white;
+  bottom: 0;
+  /* position: absolute; */
+  padding: 1em;
+  margin-top: 100px;
+  border-top: 3px solid #ec6609;
+}
+
+/********************************Media queries*********************************/
+
 @media (min-width: 768px) {
   .basketCard{
     max-width: 350px;
@@ -356,14 +377,4 @@ main .description{
   .cardTitle{
     min-height: 56px;
   }
-}
-
-/*******************************Footer*****************************************/
-
-.footer{
-  color: white;
-  bottom: 0;
-  /* position: absolute; */
-  padding: 1em;
-  margin-top: 100px;
 }
