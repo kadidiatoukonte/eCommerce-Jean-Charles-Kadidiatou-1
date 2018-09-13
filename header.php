@@ -8,23 +8,23 @@
         </a>
       </div>
       <div class="navbar col-3 col-lg-8 d-flex justify-content-end">
-        <nav class="d-none d-md-block">
+        <nav class="">
           <ul class="list-unstyled">
             <li><a class="scroll whiteText" href="index.php">Accueil</a></li>
           </ul>
         </nav>
-        <nav class="d-md-none">
+        <!-- <nav class="d-md-none">
           <img class="menu text-right" src="img/menu.svg" alt="menu.svg">
-        </nav>
+        </nav> -->
       </div>
     </div>
   </div>
 </header>
 
-<div class="navbar-responsive mt-3">
+<!-- <div class="navbar-responsive mt-3">
   <nav>
     <ul class="list-unstyled">
       <li><a class="scroll blackText" href="index.php">Accueil</a></li>
     </ul>
   </nav>
-</div>
+</div> -->

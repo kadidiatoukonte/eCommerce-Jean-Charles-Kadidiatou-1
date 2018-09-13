@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Baskets For Street</title>
+  <title>Baskets For Street/product_page</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -70,7 +70,7 @@
   <?php include("footer.php");?>
 
   <?php include("scripts.php");?>
-  
+
 </body>
 
 </html>
