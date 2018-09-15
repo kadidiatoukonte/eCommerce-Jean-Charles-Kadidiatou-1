@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Baskets For Street/product_add</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <?php include("links.php");?>
+
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <?php
+  if ( isset($_POST['pseudo']) AND isset($_POST['password']) AND $_POST['password'] ==  "kirikou" AND $_POST['pseudo'] == "admin") {
+     // On affiche les codes
+  ?>
+
+  <p class="h3">Ajout de produit en base de données : </p>
+
+  <form class="mt-3 ml-3 mb-5" action="product_post.php" method="post" enctype="multipart/form-data">
+
+    <p>
+      <label for="name">Nom produit : </label>
+      <input type="text" name="name" required/>
+    </p>
+
+    <p>
+       <label for="description" >Description : </label>
+       <textarea name="description" required></textarea>
+    </p>
+
+    <p>
+        <label for="price">Prix : </label>
+        <input type="number" name="price" required/>
+    </p>
+
+    <p>
+        <label for="availability">Disponibilité : </label>
+        <input type="text" name="availability" required/>
+    </p>
+
+    <p>
+        Image produit (jpg):
+        <input type="file" name="image" required/>
+
+    </p>
+
+    <input type="submit" value="Envoyer" />
+
+  </form>
+
+  <?php
+     }
+     else // Sinon, on affiche un message d'erreur
+     {
+       echo 'Veuillez retaper pseudo et/ou mot de passe';
+       header('refresh:3;url=http://localhost/php/boulot_semaine_12/site_e_commerce_jc/admin.php');
+
+        // header('Location: admin.php');
+     }
+     ?>
+
+
+<?php include("scripts.php");?>
+
+</body>
+
+</html>
