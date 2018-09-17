@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+ ?>
+
 <!doctype html>
 <html class="no-js" lang="fr">
 
@@ -17,10 +23,7 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <?php
-  if ( isset($_POST['pseudo']) AND isset($_POST['password']) AND $_POST['password'] ==  "kirikou" AND $_POST['pseudo'] == "admin") {
-     // On affiche les codes
-  ?>
+
 
   <p class="h3">Ajout de produit en base de données : </p>
 
@@ -47,7 +50,7 @@
     </p>
 
     <p>
-        Image produit (jpg):
+        Image produit (jpg / png):
         <input type="file" name="image" required/>
 
     </p>
@@ -55,17 +58,6 @@
     <input type="submit" value="Envoyer" />
 
   </form>
-
-  <?php
-     }
-     else // Sinon, on affiche un message d'erreur
-     {
-       echo 'Veuillez retaper pseudo et/ou mot de passe';
-       header('refresh:3;url=http://localhost/php/boulot_semaine_12/site_e_commerce_jc/admin.php');
-
-        // header('Location: admin.php');
-     }
-     ?>
 
 
 <?php include("scripts.php");?>

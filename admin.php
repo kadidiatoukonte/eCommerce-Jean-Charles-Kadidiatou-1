@@ -17,7 +17,7 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <form action="product_add.php" method="post">
+  <form action="check_admin.php" method="post">
     <p>
       <label for="pseudo">Pseudo : </label>
       <input type="text" name="pseudo" required />

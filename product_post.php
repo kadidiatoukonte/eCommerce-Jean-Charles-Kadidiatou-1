@@ -45,12 +45,15 @@ AND isset($_FILES['image']) AND !empty($_FILES['image']) AND $_FILES['image']['e
             'img_name' => $img_name,
             'id_article' => $last_id
           ));
+      }else {
+        echo 'Le type d\'image n\'est pas bon !.';
       }
   }
   echo 'Les infos produit et image ont bien été ajoutées !.';
-  header('refresh:3;url=product_add.php');
+  header('refresh:1;url=product_add.php');
 }else {
-
+  echo 'Veuillez réessayer !.';
+  header('refresh:1;url=product_add.php');
 }
 
 ?>
