@@ -38,7 +38,7 @@
 
     <p>
         <label for="price">Prix : </label>
-        <input type="number" name="price" required/>
+        <input type="text" name="price" required/>
     </p>
 
     <p>

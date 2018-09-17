@@ -14,6 +14,9 @@
             <li><a class="scroll whiteText" href="contact.php">Contact</a></li>
           </ul>
         </nav>
+        <div class="basket ml-3">
+          <img src="img/icons8-panier-2-50.png" alt="basket_img.png">
+        </div>
         <!-- <nav class="d-md-none">
           <img class="menu text-right" src="img/menu.svg" alt="menu.svg">
         </nav> -->
