@@ -1,3 +1,5 @@
+<!-- Checks if contact form is set and not empty and displays it -->
+
 <?php
 
 if (isset($_POST['email']) AND !empty($_POST['email'])) {

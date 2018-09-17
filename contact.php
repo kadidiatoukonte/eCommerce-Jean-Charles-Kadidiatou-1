@@ -20,6 +20,7 @@
 <?php include("header.php");?>
 
 
+<!-- Contact form -->
 <main>
 
 <h2 class="text-center mt-3 h4">Nous contacter</h2>

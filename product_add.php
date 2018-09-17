@@ -24,7 +24,8 @@ session_start();
   <![endif]-->
 
 
-
+  <!-- Add product in database form -->
+  
   <p class="h3">Ajout de produit en base de données : </p>
 
   <form class="mt-3 ml-3 mb-5" action="product_post.php" method="post" enctype="multipart/form-data">

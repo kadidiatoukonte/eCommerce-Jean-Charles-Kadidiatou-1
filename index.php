@@ -21,6 +21,8 @@
 
 
 <?php
+
+// Database access
 try
 {
   $bdd = new PDO('mysql:host=localhost;dbname=site_eCommerce;charset=utf8', 'root', 'Strawberry591peaches', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -30,7 +32,7 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 
-
+// Request on database to get elements we choose
 $req = $bdd->query('SELECT p.img_name image_name, p.id_article article_id, i.name article_name, i.price article_price, i.availability article_availability, i.description article_description
 FROM infos_articles i
 INNER JOIN images p
@@ -47,6 +49,8 @@ LIMIT 4
   <div class="row col-12 mx-auto d-flex justify-content-around">
 
       <?php
+
+      // loop for display products with elements of the database
       foreach ($req as $key => $value) {
       ?>
 

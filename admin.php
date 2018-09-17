@@ -17,6 +17,9 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
+
+<!-- Admin form to protect the entry to product_add page -->
+
   <form action="check_admin.php" method="post">
     <p>
       <label for="pseudo">Pseudo : </label>
