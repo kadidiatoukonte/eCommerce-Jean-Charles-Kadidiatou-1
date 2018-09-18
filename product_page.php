@@ -30,17 +30,17 @@
           die('Erreur : '.$e->getMessage());
   }
 
-  // $index = '$GET(\'index\')';
+  $index = $_GET['index'];
 
   $req = $bdd->query('SELECT p.img_name image_name, p.id_article article_id, i.name article_name, i.price article_price, i.availability article_availability, i.description article_description
   FROM infos_articles i
   INNER JOIN images p
   ON p.id_article = i.id
-  
-  LIMIT 4
+  WHERE p.id_article = ' . $index . '
+
   ');
 
-  foreach ($req as $key => $value) {
+  $donnees = $req->fetch()
 
   ?>
 
@@ -49,12 +49,12 @@
       <div class="productImageAndDetails my-5 row col-12 mx-auto">
 
           <div class="productImage col-12 col-lg-6  mx-auto mb-3">
-              <p class="productName my-0 d-lg-none text-center font-weight-bold"><?php echo $value['article_name'];?></p>
-              <img class="d-block mx-auto productDetailsImage" src="<?php echo 'img/' . $value['image_name'];?>" alt="basket_homme.jpg">
+              <p class="productName my-0 d-lg-none text-center font-weight-bold"><?php echo $donnees['article_name'];?></p>
+              <img class="d-block mx-auto productDetailsImage" src="<?php echo 'img/' . $donnees['image_name'];?>" alt="basket_homme.jpg">
           </div>
 
           <div class="productDetails col-12 col-lg-6  mx-auto">
-              <p class="text-center d-none d-lg-block font-weight-bold mt-2 mb-4"><?php echo $value['article_name'];?></p>
+              <p class="text-center d-none d-lg-block font-weight-bold mt-2 mb-4"><?php echo $donnees['article_name'];?></p>
 
               <p class="mx-auto d-flex justify-content-between">
                 <label for="color" class="font-weight-bold">Choisissez votre couleur :</label>
@@ -76,24 +76,17 @@
                 </select>
               </p>
 
-              <p><span class="price font-weight-bold">Prix : </span><?php echo $value['article_price'];?></p>
+              <p><span class="price font-weight-bold">Prix : </span><?php echo $donnees['article_price'];?></p>
 
-              <p><span class="availability font-weight-bold">Disponibilité : </span><?php echo $value['article_availability'];?></p>
+              <p><span class="availability font-weight-bold">Disponibilité : </span><?php echo $donnees['article_availability'];?></p>
 
               <p class="description text-nowrap">
-              <span class="font-weight-bold">Descriptif : </span><?php echo $value['article_description'];?>
+              <span class="font-weight-bold">Descriptif : </span><?php echo $donnees['article_description'];?>
               </p>
         </div>
       </div>
     </div>
   </main>
-
-  <?php
-  }
-  ?>
-
-
-
 
 
   <?php include("footer.php");?>

@@ -37,6 +37,7 @@ $req = $bdd->query('SELECT p.img_name image_name, p.id_article article_id, i.nam
 FROM infos_articles i
 INNER JOIN images p
 ON p.id_article = i.id
+ORDER BY p.id_article DESC
 LIMIT 4
 ');
 
