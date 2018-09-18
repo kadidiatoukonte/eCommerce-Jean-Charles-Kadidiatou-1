@@ -62,6 +62,7 @@
               <p class="description text-nowrap">
               <span class="font-weight-bold">Descriptif : </span><?php echo $products[$_GET['index']]['description'];?>
               </p>
+              <p><button id="achat" type="button" class="btn btn-outline-dark">Ajouter au panier</button></p>
         </div>
       </div>
     </div>

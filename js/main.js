@@ -9,3 +9,11 @@ $(".menu").click(function () {
   $(".navbar-responsive").toggle("slow");
 
 });
+
+//Incrementation du panier
+function clic() {
+compteurClics++;
+document.getElementById("header").textContent = compteurClics;
+}
+var compteurClics = 0;
+document.getElementById("achat").addEventListener("click", clic);
