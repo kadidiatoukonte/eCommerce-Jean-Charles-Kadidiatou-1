@@ -19,7 +19,29 @@
 
 <?php include("header.php");?>
 
-<?php include("products_array.php");?>
+
+<?php
+
+// Database access
+try
+{
+  $bdd = new PDO('mysql:host=localhost;dbname=site_eCommerce;charset=utf8', 'root', 'Strawberry591peaches', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+
+// Request on database to get elements we choose
+$req = $bdd->query('SELECT p.img_name image_name, p.id_article article_id, i.name article_name, i.price article_price, i.availability article_availability, i.description article_description
+FROM infos_articles i
+INNER JOIN images p
+ON p.id_article = i.id
+ORDER BY p.id_article DESC
+LIMIT 4
+');
+
+?>
 
 <main>
 
@@ -28,14 +50,16 @@
   <div class="row col-12 mx-auto d-flex justify-content-around">
 
       <?php
-      foreach ($products as $key => $value) {
+
+      // loop for display products with elements of the database
+      foreach ($req as $key => $value) {
       ?>
 
       <div class="basketCard mt-3 border border-dark col-12 col-md-6 col-lg-3">
-        <a href="product_page.php?index=<?php echo $key; ?>">
-          <p class="cardTitle text-center pt-2 blackText"><?php echo $value['productName']; ?></p>
-          <img class="cardImg w-100" src=<?php echo $value['image'];?> alt="basket_homme.jpg">
-          <p class="cardPrice text-center pb-2 mb-0 mt-2 blackText"><?php echo $value['price'];?></p>
+        <a href="product_page.php?index=<?php echo $value['article_id']; ?>">
+          <p class="cardTitle text-center pt-2 blackText"><?php echo $value['article_name']; ?></p>
+          <img class="cardImg w-100" src=<?php echo 'img/' . $value['image_name'];?> alt="basket_homme.jpg">
+          <p class="cardPrice text-center pb-2 mb-0 mt-2 blackText"><?php echo 'A partir de ' . $value['article_price'] . ' euros';?></p>
         </a>
       </div>
 

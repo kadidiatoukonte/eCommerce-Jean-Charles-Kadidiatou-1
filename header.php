@@ -1,5 +1,6 @@
 <header class="d-flex align-items-center blueGreyBackground">
   <div class="container-fluid">
+
       <div class="row">
           <div class="col">
             <h1 class="h5 blackText">Baskets For Street </h1>
@@ -9,6 +10,7 @@
             <nav class="">
               <ul class="list-unstyled">
                 <li><a class="scroll whiteText" href="index.php">Accueil</a></li>
+                <li><a class="scroll whiteText" href="contact.php">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -19,5 +21,9 @@
           </div>
         </div>
       </div>
+        <!-- <nav class="d-md-none">
+          <img class="menu text-right" src="img/menu.svg" alt="menu.svg">
+        </nav> -->
+
   </div>
 </header>

@@ -385,9 +385,16 @@ main .description{
 
 /********************************Media queries*********************************/
 
+.productDetailsImage{
+  max-width: 500px;
+}
+
 @media (min-width: 768px) {
   .basketCard{
     max-width: 350px;
+  }
+  .productDetailsImage{
+    max-width: 750px;
   }
 }
 
@@ -397,5 +404,8 @@ main .description{
   }
   .cardTitle{
     min-height: 56px;
+  }
+  .productDetailsImage{
+    max-width: 350px;
   }
 }
