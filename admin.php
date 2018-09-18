@@ -17,14 +17,12 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-<<<<<<< HEAD
-  <form action="product_add.php" method="post">
-=======
+
 
 <!-- Admin form to protect the entry to product_add page -->
 
   <form action="check_admin.php" method="post">
->>>>>>> JC
+
     <p>
       <label for="pseudo">Pseudo : </label>
       <input type="text" name="pseudo" required />
